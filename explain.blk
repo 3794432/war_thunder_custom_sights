@@ -1,0 +1,121 @@
+//总体
+thousandth:t="ussr"//坐标千分数:ussr(1/6000),nato(1/6400),real(1/6283)
+fontSizeMult:r=1//元素放大
+lineSizeMult:r=1//十字线放大
+drawCentralLineVert:b=true//是否绘制垂直十字线
+drawCentralLineHorz:b=true//是否绘制水平十字线
+
+//适配载具类型
+matchExpClass{
+exp_tank:b=true
+exp_heavy_tank:b=true
+exp_tank_destroyer:b=true
+exp_SPAA:b=true
+}
+
+crosshairColor:c=0,0,0,255//瞄具颜色
+crosshairLightColor:c=0,0,0,0//瞄具照明颜色
+
+//测距相关
+rangefinderUseThousandth:b=false//测距位置是否使用千分值
+rangefinderProgressBarColor1:c=0,255,0,64//测距进度条颜色
+rangefinderProgressBarColor2:c=255,255,255,64//测距进度条背景颜色
+rangefinderTextScale:r=0.7//测距进度条厚度
+rangefinderHorizontalOffset:r=5//测距水平位置
+rangefinderVerticalOffset:r=0.1//测距垂直位置
+
+drawDistanceCorrection:b=true//是否绘制距离
+distanceCorrectionPos:p2=-0.26,-0.05//距离位置
+
+detectAllyTextScale:r=0.7//侦察文本厚度
+detectAllyOffset:p2=4,0.05//侦察位置
+
+//刻度相关
+crosshairHorVertSize:p2=3,2//水平十字线上的刻度长度
+crosshairDistHorSizeAdditional:p2=0.005,0.003//垂直十字线上的刻度长度
+drawUpward:b=false//下坠刻度的朝向
+distancePos:p2=0.15,0//下坠刻度的位置
+crosshairDistHorSizeMain:p2=0.03,0.02//下坠刻度长度
+
+crosshair_hor_ranges{//绘制水平十字线上的刻度
+//range:p2(来自2个值的数据)=-32,32(距离,文本)
+  range:p2=-32,32
+  range:p2=-28,0
+  range:p2=-24,24
+  range:p2=-20,0
+  range:p2=-16,16
+  range:p2=-12,0
+  range:p2=-8,8
+  range:p2=-4,0
+  range:p2=4,0
+  range:p2=8,8
+  range:p2=12,0
+  range:p2=16,16
+  range:p2=20,0
+  range:p2=24,24
+  range:p2=28,0
+}
+
+crosshair_distances{//绘制下坠刻度
+//distance:p3(来自3个值的数据)=200,0,0(距离,文本,长度)
+  distance:p3=200,0,0
+  distance:p3=400,4,0
+  distance:p3=600,0,0
+  distance:p3=800,8,0
+  distance:p3=1000,0,0
+  distance:p3=1200,12,0
+  distance:p3=1400,0,0
+  distance:p3=1600,16,0
+  distance:p3=1800,0,0
+  distance:p3=2000,20,0
+  distance:p3=2200,0,0
+  distance:p3=2400,24,0
+  distance:p3=2600,0,0
+  distance:p3=2800,28,0
+}
+
+drawLines{//绘制线条
+  line{
+    line:p4/*来自4个值的数据*/=0,0,0,0/*起点坐标和终点坐标*/
+    move:b=false//是否移动
+    thousandth:b=false//是否千分
+  }
+}
+
+drawCircles {//绘制圆形
+  circle{
+    segment:p2/*来自2个值的数据*/=0,0/*从6点钟方向开始抹去度数和绘制度数*/
+    pos:p2=0,0//圆心位置
+    diameter:r=0.5//半径
+    size:r=2//厚度
+	  move:b=false//是否移动
+    thousandth:b=false//是否千分
+  }
+}
+
+drawTexts{
+  text{
+    text:t=""//"文本"
+    align:i=1//对齐
+    pos:p2=0,0//位置
+    move:b=false//是否移动
+    highlight:b=false//是否能被点亮
+    thousandth:b=false//是否千分
+    size:r=1//厚度
+  }
+}
+
+drawQuads{//绘制四边形
+  quad{
+    tl:p2=-0,0//左上点坐标
+    tr:p2=0,0//右上点坐标
+    br:p2=0,0//右下点坐标
+    bl:p2=-0,0//右上点坐标
+    center:p2=0,-90
+    radialCenter:p2=0,0//旋转中心
+    radialAngle:r=0//初始旋转角度
+    radialMoveSpeed:r=0//径向移动速度
+    moveRadial:b=false//是否径向移动
+    thousandth:b=false//是否千分
+  }
+}
