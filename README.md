@@ -5,4 +5,4 @@ Its'a warthunder sight with chinese comments
 
 内容如图:
 
-![image](https://github.com/user-attachments/assets/1e38e330-8e68-47a8-862b-335685ecfb9c)
+![146e0906cd6faec39de7be43822c0170](https://github.com/user-attachments/assets/4d394816-1ee9-478d-87d7-5ff28ebb6532)
